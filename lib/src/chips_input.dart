@@ -435,7 +435,7 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
                 maxLines: 1,
                 overflow: widget.textOverflow,
                 style: widget.textStyle ??
-                    theme.textTheme.subtitle1!.copyWith(height: 1.5),
+                    theme.textTheme.titleMedium!.copyWith(height: 1.5),
               ),
             ),
             Flexible(
@@ -492,4 +492,19 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
 
   @override
   void removeTextPlaceholder() {}
+
+  @override
+  void didChangeInputControl(TextInputControl? oldControl, TextInputControl? newControl) {
+
+  }
+
+  @override
+  void insertContent(KeyboardInsertedContent content) {
+
+  }
+
+  @override
+  void performSelector(String selectorName) {
+
+  }
 }
