@@ -51,6 +51,7 @@ class ChipsInput<T> extends StatefulWidget {
     this.allowChipEditing = false,
     this.focusNode,
     this.initialSuggestions,
+    this.backgroundColor,
   })  : assert(maxChips == null || initialValue.length <= maxChips),
         super(key: key);
 
@@ -75,6 +76,7 @@ class ChipsInput<T> extends StatefulWidget {
   final bool allowChipEditing;
   final FocusNode? focusNode;
   final List<T>? initialSuggestions;
+  final Color? backgroundColor;
 
   // final Color cursorColor;
 
@@ -204,6 +206,7 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
             if (snapshot.hasData && snapshot.data!.isNotEmpty) {
               final suggestionsListView = Material(
                 elevation: 0,
+                color: widget.backgroundColor,
                 child: ConstrainedBox(
                   constraints: BoxConstraints(
                     maxHeight: suggestionBoxHeight,
